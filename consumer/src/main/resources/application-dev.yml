@@ -2,9 +2,9 @@
 spring:
   datasource:
     driver-class-name: com.mysql.jdbc.Driver
-    url: jdbc:mysql://112.126.99.185:3306/demo?characterEncoding=UTF-8&serverTimezone=UTC
+    url: jdbc:mysql://127.0.0.1:3306/demo?characterEncoding=UTF-8&serverTimezone=UTC
     username: root
-    password: Roc2z2209861,
+    password: root
     # jpa
     jpa:
       database: mysql

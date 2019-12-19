@@ -1,4 +1,9 @@
 server:
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/zhongyp/cloud-config.git
   port: 13001
 # 数据库配置
 spring:
