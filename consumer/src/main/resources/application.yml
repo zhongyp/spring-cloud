@@ -1,0 +1,32 @@
+server:
+  port: 12001
+# 数据库配置
+spring:
+  application:
+    name: comsumer
+  profiles:
+    active: dev
+  datasource:
+    # jpa
+    jpa:
+      database: mysql
+      database-platform: org.hibernate.dialect.MySQL5InnoDBDialec
+      generate-ddl: false
+      show-sql: true
+      # 格式化sql语句
+      properties:
+        hibernate-format_sql: true
+        # 解决 hibernate multiple merge 问题
+        hibernate.event.merge.entity_copy_observer: allow
+      hibernate:
+        ddl-auto: none
+logging:
+  level:
+    root: INFO
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:14001/eureka/
+  instance:
+    instance-id: comsumer-12001
+    prefer-ip-address: true

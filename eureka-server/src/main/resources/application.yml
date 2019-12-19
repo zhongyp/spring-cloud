@@ -1,0 +1,18 @@
+spring:
+  profiles:
+    active: dev
+server:
+  port: 14001
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    # 注册中心不注册自己
+    register-with-eureka: false
+    # 维护实例，不需要检索
+    fetch-registry: false
+    service-url:
+      defaultZone: http://${eureka.instance.hostname}:${server.port}/eureka/
+logging:
+  level:
+    root: INFO

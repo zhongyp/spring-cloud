@@ -4,26 +4,32 @@
     <modelVersion>4.0.0</modelVersion>
     <parent>
         <groupId>com.zhongyp.spring.cloud</groupId>
-        <artifactId>springp-cloud</artifactId>
+        <artifactId>spring-cloud</artifactId>
         <version>1.0.0</version>
         <relativePath>../pom.xml</relativePath>
     </parent>
     <groupId>com.zhongyp</groupId>
     <artifactId>consumer</artifactId>
-    <version>0.0.1-SNAPSHOT</version>
+    <version>1.0.0</version>
     <name>consumer</name>
     <description>Demo project for Spring Boot</description>
 
     <dependencies>
 
         <dependency>
-            <groupId>org.zhongyp.spring.cloud.common</groupId>
+            <groupId>com.zhongyp.spring.cloud.common</groupId>
             <artifactId>spring-cloud-common</artifactId>
             <version>1.0.0</version>
         </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-ribbon</artifactId>
+        </dependency>
+        <dependency>
+            <groupId>org.springframework.cloud</groupId>
+            <artifactId>spring-cloud-starter-netflix-eureka-client</artifactId>
+        </dependency>
     </dependencies>
-
-
     <build>
         <plugins>
             <plugin>
