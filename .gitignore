@@ -30,7 +30,6 @@ build/
 ### VS Code ###
 .vscode/
 
-*/src/main/resources/datasource.properties
-
-*/src/main/resources/application-dev.yml
-
+consumer/src/main/resources/application-dev.yml
+eureka-server/src/main/resources/application-dev.yml
+provider/src/main/resources/application-dev.yml
