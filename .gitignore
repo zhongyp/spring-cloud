@@ -32,4 +32,6 @@ build/
 
 */src/main/resources/datasource.properties
 
-*/src/main/resources/application-dev.yml
+*/src/main/resources/*
+./consumer/src/main/resources/
+consumer/src/main/resources/
