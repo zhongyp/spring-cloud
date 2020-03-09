@@ -1,0 +1,18 @@
+server:
+  port: 14000
+# 数据库配置
+spring:
+  profiles:
+    active: dev
+  application:
+    name: config-server
+logging:
+  level:
+    root: INFO
+#eureka:
+#  instance:
+#    instance-id: config-server
+#    prefer-ip-address: true
+#  client:
+#    service-url:
+#      defaultZone: http://localhost:10000/eureka/

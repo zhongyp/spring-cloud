@@ -1,0 +1,12 @@
+server:
+  port: 16000
+spring:
+  application:
+    name: ribbon-client
+  profiles:
+    active: dev
+  cloud:
+    config:
+      fail-fast: true
+      name: datasource, eureka-client, log
+      uri: http://localhost:14000

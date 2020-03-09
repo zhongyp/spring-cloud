@@ -1,4 +1,4 @@
-package com.zhongyp.eurekaserver;
+package com.zhongyp.eureka.server;
 
 import org.junit.Test;
 import org.springframework.boot.test.context.SpringBootTest;

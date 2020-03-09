@@ -1,26 +1,18 @@
 # 数据库配置
+server:
+  port: 12000
+eureka:
+  instance:
+    instance-id: consumer
+    prefer-ip-address: true
+  client:
+    service-url:
+      defaultZone: http://localhost:10000/eureka/
 spring:
-  cloud:
-    config:
-      server:
-        git:
-          uri: https://github.com/zhongyp/cloud-config.git
   application:
     name: comsumer-client
-  datasource:
-    # jpa
-    jpa:
-      database: mysql
-      database-platform: org.hibernate.dialect.MySQL5InnoDBDialec
-      generate-ddl: false
-      show-sql: true
-      # 格式化sql语句
-      properties:
-        hibernate-format_sql: true
-        # 解决 hibernate multiple merge 问题
-        hibernate.event.merge.entity_copy_observer: allow
-      hibernate:
-        ddl-auto: none
+  profiles:
+    active: dev
 logging:
   level:
     root: INFO
