@@ -34,6 +34,7 @@ consumer/src/main/resources/application-dev.yml
 eureka-server/src/main/resources/application-dev.yml
 provider/src/main/resources/application-dev.yml
 
-config-server/src/main/resources/application-test.yml
-consumer/src/main/resources/application-test.yml
-provider/src/main/resources/application-test.yml
+*/*/application-test.yml
+
+
+*/*/.DS_Store
