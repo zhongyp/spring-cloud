@@ -33,4 +33,3 @@ build/
 *-dev.yml
 *-test.yml
 .DS_Store
-config-server/src/main/resources/application-dev.yml
