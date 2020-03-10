@@ -30,11 +30,8 @@ build/
 ### VS Code ###
 .vscode/
 
-consumer/src/main/resources/application-dev.yml
-eureka-server/src/main/resources/application-dev.yml
-provider/src/main/resources/application-dev.yml
-
-*/*/application-test.yml
+*-dev.yml
+*-test.yml
+.DS_Store
 
 
-*/*/.DS_Store
