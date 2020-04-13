@@ -1,0 +1,29 @@
+server:
+  port: 16000
+spring:
+  application:
+    name: cloud-bus
+  profiles:
+    active: dev
+  cloud:
+    config:
+      profiles: dev
+      name: test, eureka-client, log
+      uri: http://localhost:14000/
+      label: master
+      discovery:
+        enabled: false
+        service-id: ${spring.application.name}:${server.port}
+        profile: dev
+  rabbitmq:
+    username: guest
+    password: guest
+    host: localhost
+    port: 5672
+management:
+  endpoints:
+    web:
+      exposure:
+        include: bus-refresh
+
+

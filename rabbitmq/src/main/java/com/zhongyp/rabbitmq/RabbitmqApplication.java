@@ -2,6 +2,7 @@ package com.zhongyp.rabbitmq;
 
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
+import org.springframework.context.annotation.EnableMBeanExport;
 
 /**
  * @author zhongyp.
@@ -9,6 +10,7 @@ import org.springframework.boot.autoconfigure.SpringBootApplication;
  */
 
 @SpringBootApplication
+@EnableMBeanExport
 public class RabbitmqApplication {
     public static void main(String[] args) {
         SpringApplication.run(RabbitmqApplication.class, args);

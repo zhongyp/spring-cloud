@@ -2,6 +2,7 @@ package com.zhongyp.spring.cloud.ribbon.client.service.impl;
 
 import com.zhongyp.spring.cloud.ribbon.client.service.RibbonService;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.cloud.client.loadbalancer.LoadBalanced;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
 
@@ -13,6 +14,7 @@ import org.springframework.web.client.RestTemplate;
 public class RibbonServiceImpl implements RibbonService {
 
     @Autowired
+    @LoadBalanced
     RestTemplate restTemplate;
 
     @Override

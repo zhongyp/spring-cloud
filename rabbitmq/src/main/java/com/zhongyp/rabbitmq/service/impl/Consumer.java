@@ -1,6 +1,6 @@
 package com.zhongyp.rabbitmq.service.impl;
 
-import com.zhongyp.rabbitmq.service.config.RabbitMQConfig;
+import com.zhongyp.rabbitmq.service.config.RabbitmqConfig;
 import org.springframework.amqp.rabbit.core.RabbitTemplate;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Component;
@@ -16,7 +16,7 @@ public class Consumer {
     private RabbitTemplate rabbitTemplate;
 
     public void consumer() {
-        System.out.println("接收到消息：" + rabbitTemplate.receiveAndConvert(RabbitMQConfig.QUEUE_NAME));
+        System.out.println("接收到消息：" + rabbitTemplate.receiveAndConvert(RabbitmqConfig.QUEUE_NAME));
 
     }
 }

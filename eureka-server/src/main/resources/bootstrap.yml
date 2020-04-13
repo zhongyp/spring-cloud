@@ -4,9 +4,16 @@ spring:
   application:
     name: eureka-server
   profiles:
-    active: production
-  cloud:
-    config:
-      fail-fast: true
-      name: datasource, eureka-server, log
-      uri: http://localhost:14000
+    active: dev
+eureka:
+  instance:
+    instance-id: ${spring.application.name}:${server.port}
+    prefer-ip-address: true
+  client:
+    # 单例启动时不要使用下面的两个注释
+    # 不注册自己
+    register-with-eureka: false
+    # 不获取自己
+    fetch-registry: false
+    service-url:
+      defaultZone: http://localhost:10000/eureka/

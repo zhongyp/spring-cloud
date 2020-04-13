@@ -1,12 +1,17 @@
 server:
-  port: 11000
+  port: 12000
 spring:
   application:
     name: provider
   profiles:
-    active: production
+    active: dev
   cloud:
     config:
-      fail-fast: true
+      profiles: dev
       name: datasource, eureka-client, log
-      uri: http://localhost:14000
+      uri: http://localhost:14000/
+      label: master
+      discovery:
+        enabled: false
+        service-id: ${spring.application.name}:${server.port}
+        profile: dev
